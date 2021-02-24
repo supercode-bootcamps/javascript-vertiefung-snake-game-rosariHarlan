@@ -21,6 +21,10 @@ body {
   border-radius: 5px;
 }
 
+.food {
+  background-color: #e11b22;
+}
+
 @keyframes disco {
   from {
     box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fe019a,

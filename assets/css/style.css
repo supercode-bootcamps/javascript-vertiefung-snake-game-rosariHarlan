@@ -1,10 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
 * {
   box-sizing: border-box;
 }
 
 body {
   background-color: #000;
+  font-family: "VT323", monospace;
 }
+
+/* --- Snake container --- */
 
 #snakeField {
   display: flex;
@@ -21,9 +26,72 @@ body {
   border-radius: 5px;
 }
 
-.food {
-  background-color: #e11b22;
+/* --- Score display --- */
+
+#scoreBoard {
+  display: block;
+  width: 50vw;
+  position: absolute;
+  top: 0;
+  z-index: -1;
 }
+
+#scoreBoard img {
+  width: 30%;
+  margin-left: 5em;
+  display: none;
+}
+
+#score {
+  color: #fe019a;
+  font-size: 3em;
+}
+
+/* --- Popup --- */
+
+.popUp {
+  visibility: hidden;
+  width: 11em;
+  color: #fe019a;
+  background-color: #fff;
+  border-radius: 7px;
+  text-align: center;
+  position: absolute;
+  z-index: 2;
+  left: 30.5%;
+  top: 2em;
+  font-size: 3em;
+  padding: 11px;
+  line-height: 1.5;
+}
+
+.showPopup {
+  visibility: visible;
+  animation: fadeIn 1s;
+}
+
+/* --- Timer --- */
+
+#timer {
+  color: #fe019a;
+  font-size: 3em;
+  position: absolute;
+  right: 3em;
+  top: 2em;
+  border: 3px solid #fe019a;
+  padding: 10px;
+  width: 4em;
+  height: 1.5em;
+  text-align: center;
+}
+
+/* --- Disable the game --- */
+
+.disabled {
+  pointer-events: none;
+}
+
+/* --- Animations --- */
 
 @keyframes disco {
   from {
@@ -33,5 +101,14 @@ body {
   to {
     box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fe019a,
       0 0 35px #fe019a, 0 0 40px #fe019a, 0 0 50px #fe019a, 0 0 75px #fe019a;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

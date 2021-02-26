@@ -1,0 +1,14 @@
+/* --- Timer --- */
+
+#timer {
+  color: #fe019a;
+  font-size: 3em;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  border: 3px solid #fe019a;
+  padding: 10px;
+  width: 6em;
+  height: 2.5em;
+  text-align: center;
+}
